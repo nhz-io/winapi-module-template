@@ -7,3 +7,4 @@ Release
 Debug
 npm-debug*.log
 .vs
+.tmp
