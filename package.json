@@ -1,6 +1,6 @@
 {
   "name": "@winapi/module-template",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "WinApi module template",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,8 @@
     "cleanup": "shx rm -rf binding.gyp",
     "config": "npm config set msvs_version 2015 --local",
     "node-gyp:binding": "shx cp -r gyp/node-binding.gyp binding.gyp",
-    "node-gyp:configure":"node-gyp configure",
-    "node-gyp:build":"node-gyp build",
+    "node-gyp:configure": "node-gyp configure",
+    "node-gyp:build": "node-gyp build",
     "nw-gyp:binding": "shx cp -r gyp/nwjs-binding.gyp binding.gyp",
     "nw-gyp:patch": "shc cp -r gyp/MSVSVersion.py node_modules/nw-gyp/gyp/pylib/gyp/MSVSVersion.py",
     "nw-gyp:configure": "nw-gyp configure",
