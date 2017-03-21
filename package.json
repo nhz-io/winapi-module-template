@@ -5,7 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node-gyp build"
+    "clean": "shx rm -rf build binding.gyp",
+    "cleanup": "shx rm -rf binding.gyp",
+    "config": "npm config set msvs_version 2015 --local",
+    "node-gyp:binding": "shx cp -r gyp/node-binding.gyp binding.gyp",
+    "node-gyp:configure":"node-gyp configure",
+    "node-gyp:build":"node-gyp build",
+    "nw-gyp:binding": "shx cp -r gyp/nwjs-binding.gyp binding.gyp",
+    "nw-gyp:patch": "shc cp -r gyp/MSVSVersion.py node_modules/nw-gyp/gyp/pylib/gyp/MSVSVersion.py",
+    "nw-gyp:configure": "nw-gyp configure",
+    "nw-gyp:build": "nw-gyp build",
+    "prepublish": "npm run cleanup"
   },
   "author": "Ishi Ruy <dev@nhz.io>",
   "license": "MIT",
@@ -16,7 +26,8 @@
   "devDependencies": {
     "nan": "^2.5.1",
     "node-gyp": "^3.6.0",
-    "nw-gyp": "^3.4.0"
+    "nw-gyp": "^3.4.0",
+    "shx": "^0.2.2"
   },
   "dependencies": {
     "bindings": "^1.2.1"
