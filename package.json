@@ -1,6 +1,6 @@
 {
   "name": "@winapi/module-template",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "WinApi module template",
   "main": "index.js",
   "scripts": {
