@@ -6,6 +6,7 @@ branches:
 
 install:
   - npm i
+  - del *.tgz /F /Q
   - npm run clean
   - npm run config
 
@@ -16,5 +17,9 @@ test_script:
   - npm run node-gyp:configure
   - npm run node-gyp:build
   - npm run cleanup
+  - npm pack
+
+artifacts:
+  - path: '*.tgz'
 
 shallow_clone: true
