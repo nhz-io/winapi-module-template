@@ -1,0 +1,15 @@
+{
+  "name": "@winapi/module-template",
+  "version": "0.0.1",
+  "description": "WinApi module template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ishi Ruy <dev@nhz.io>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhz-io/capture.git"
+  }
+}
