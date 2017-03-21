@@ -6,16 +6,15 @@ branches:
 
 install:
   - npm i
+  - npm run clean
   - npm run config
 
 build: off
 
 test_script:
-  - npm run clean
   - npm run node-gyp:binding
   - npm run node-gyp:configure
   - npm run node-gyp:build
-  - npm run build
   - npm run cleanup
 
 shallow_clone: true
