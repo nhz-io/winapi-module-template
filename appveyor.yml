@@ -1,0 +1,13 @@
+image: Visual Studio 2015
+
+branches:
+  only:
+    - master
+
+install:
+  - npm i
+
+build:
+  - node run build
+
+shallow_clone: true
