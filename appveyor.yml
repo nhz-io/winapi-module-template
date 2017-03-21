@@ -9,7 +9,7 @@ install:
 
 build: off
 
-test:
+test_script:
   - npm run build
 
 shallow_clone: true
